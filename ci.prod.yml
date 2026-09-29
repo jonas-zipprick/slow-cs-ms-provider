@@ -1,6 +1,8 @@
 schemaVersion: v0.2
 prepare:
   steps:
+    - name: sleep 10 minutes
+      command: sleep 10m
     - name: install frontend dependencies
       command: cd frontend && npm ci
     - name: install backend dependencies
