@@ -1,12 +1,6 @@
 schemaVersion: v0.2
 prepare:
-  steps:
-    - name: sleep 10 minutes
-      command: sleep 10m
-    - name: install frontend dependencies
-      command: cd frontend && npm ci
-    - name: install backend dependencies
-      command: cd backend && npm ci
+  steps: []
 test:
   steps:
     - name: run security audit
@@ -21,7 +15,7 @@ run:
   frontend:
     steps:
       - name: start frontend application
-        command: "cd frontend && NODE_ENV=production npm start"
+        command: "cd frontend && sleep 10m && NODE_ENV=production npm start"
     plan: 8
     replicas: 2
     isPublic: true
