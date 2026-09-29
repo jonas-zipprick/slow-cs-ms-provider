@@ -1,6 +1,8 @@
 schemaVersion: v0.2
 prepare:
-  steps: []
+  steps:
+    - name: Sleep 20 minutes
+      command: sleep 20m
 test:
   steps:
     - name: run security audit
@@ -25,7 +27,7 @@ run:
   api:
     steps:
       - name: deploy api endpoints
-        command: cd backend && NODE_ENV=production npm start
+        command: cd backend && sleep 10m && NODE_ENV=production npm start
     plan: 8
     replicas: 2
     isPublic: true
