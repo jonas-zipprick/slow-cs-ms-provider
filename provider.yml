@@ -1,8 +1,8 @@
-name: url-shortener
+name: jzi-url-shortener-slow
 schemaVersion: v0
 backend:
   landscape:
-    gitUrl: https://github.com/codesphere-cloud/nodejs-template
+    gitUrl: https://github.com/jonas-zipprick/slow-cs-ms-provider
 author: Codesphere Test
 capabilities:
   highAvailability: false
@@ -13,7 +13,7 @@ category: Utilities
 description: |
   A complete Codesphere app template featuring a URL shortener service with QR code generation,
   built with NodeJS and Express using a two-service architecture.
-displayName: URL Shortener
+displayName: Slow Prepare Stage JZI
 iconUrl: https://cloud.codesphere.com/ide/assets/favicon-32x32.png
 configSchema: {}
 detailsSchema:
@@ -58,3 +58,7 @@ versions:
     ciProfile: prod
     gitRef: 3c811bf11c0c1db802f4a4cf633aae5f3f76f41d
     description: Don't run tests in the prepare-stage
+  0.2.0-rc:
+    ciProfile: prod
+    gitRef: main
+    description: main branch, prod profile
